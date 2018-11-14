@@ -1,0 +1,32 @@
+div.wrapper {
+    width: 600px;
+    margin: 0 auto;
+    padding: 1em;
+    border: 1px solid black;
+}
+
+label {
+    display: block;
+}
+
+form {
+    margin-bottom: 1em;
+}
+
+form button {
+    margin: 0 .5em;
+}
+
+.error {
+    color: red;
+    font-size: 11pt;
+}
+
+.success {
+    color: green;
+    font-size: 12pt;
+}
+
+.btn-danger {
+    margin-left: .5em;
+}

@@ -1,0 +1,30 @@
+div.wrapper {
+    display: inline-block;
+    width: 600px;
+    padding: 1em;
+    margin: 1em;
+    border: 1px solid black;
+    vertical-align: top;
+}
+
+label {
+    display: block;
+}
+
+form {
+    margin-bottom: 1em;
+}
+
+.error {
+    color: red;
+    font-size: 11pt;
+}
+
+.success {
+    color: green;
+    font-size: 12pt;
+}
+
+.btn-danger {
+    margin-bottom: 1em;
+}

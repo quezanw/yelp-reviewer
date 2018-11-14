@@ -1,0 +1,24 @@
+<div class="container-fluid">
+  <button [routerLink]="['new']" class='btn btn-primary new'>New Restaurant</button>
+  <table class="table table-bordered ">
+    <thead>
+      <tr>
+        <th>Restaurant</th>
+        <th>Cuisine</th>
+        <th>Actions Available</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let r of restaurants">
+        <td>{{r.name}}</td>
+        <td>{{r.cuisine}}</td>
+        <td>
+          <button [routerLink]="[r._id]"class="btn btn-primary">Read Reviews</button>
+          <button (click)="showRestaurantToEdit(r)" class="btn btn-info">Update</button>
+          <button (click)="deleteRestaurant(r._id)" class="btn btn-danger">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <app-edit (aTaskEventEmitter)="dataFromChild($event)"  *ngIf="showEdit" [restaurant]="selected"></app-edit>
+</div>

@@ -1,0 +1,17 @@
+<div class="wrapper">
+  <h3>Edit a restaurant</h3>
+  <form (submit)="editRestaurant()" class="form form-horizontal">
+    <label>
+      Restaurant Name:
+      <input class="form-control" [(ngModel)]="edit_r.name" name="edit_r.name" type="text">
+    </label>
+    <label>
+      Cuisine:
+      <input class="form-control" [(ngModel)]="edit_r.cuisine" name="edit_r.cuisine">
+    </label>
+    <button type="submit" class="btn btn-success">edit</button>
+  </form>
+  <button (click)="triggerEvent($event)" class="btn btn-danger">cancel</button>
+  <p class="error" *ngFor="let err of error">{{err}}</p>
+  <p class="success">{{success}}</p>
+</div>

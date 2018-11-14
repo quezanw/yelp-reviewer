@@ -1,0 +1,17 @@
+<div class="wrapper">
+  <h3>Register a restaurant</h3>
+  <form (submit)="submitRestaurant()" class="form form-horizontal">
+    <label>
+      Restaurant Name:
+      <input class="form-control" [(ngModel)]="new_restaurant.name" name="new_restaurant.name" type="text">
+    </label>
+    <label>
+      Cuisine:
+      <input class="form-control" [(ngModel)]="new_restaurant.cuisine" name="new_restaurant.cuisine">
+    </label>
+    <button type="submit" class="btn btn-success">create</button>
+  </form>
+  <button [routerLink]="['']" class="btn btn-danger">cancel</button>
+  <p class="error" *ngFor="let err of error">{{err}}</p>
+  <p class="success">{{success}}</p>
+</div>
